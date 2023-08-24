@@ -2,7 +2,8 @@ $mainFontFamily: 'Verdana', sans-serif !default;
 $mainFontSize: 18px !default;
 
 $titleFontFamily: 'Oswald', sans-serif;
-$titleFontSize: 48px !default;
+$titleFontSizeH1: 48px !default;
+$titleFontSizeH2: 36px !default;
 
 
 $menuHeaderFontSize: 14px;
@@ -10,4 +11,7 @@ $menuHeaderFontSize: 14px;
 // colors
 $whiteColor: #ffffff;
 $discordColor: #5662F6;
+$bodyDarkTheme: #313131;
+$secondaryColor: #EBD593;
+$footerBg: #171717;
 

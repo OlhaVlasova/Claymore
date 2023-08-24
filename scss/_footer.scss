@@ -1,0 +1,17 @@
+#footer {
+    background-color: $footerBg;
+    padding: 26px 0;
+}
+.footer-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &>p {
+        font-size: 16px;
+    }
+    
+}
+.footer-link {
+    color: $secondaryColor;
+    text-decoration: underline;
+}

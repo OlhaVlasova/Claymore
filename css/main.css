@@ -336,30 +336,32 @@ template {
 [hidden] {
   display: none; }
 
-#welcome {
-  height: 780px;
-  background-image: url("../resources/img/claymore.png");
-  background-size: auto;
-  padding-top: 30px;
-  position: relative; }
-  #welcome::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
-    top: 0;
-    left: 0;
-    z-index: 1; }
+body {
+  background-color: #313131; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  color: #ffffff; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 36px; }
+
+p {
+  font-family: "Verdana", sans-serif;
+  font-size: 18px; }
 
 #header {
   position: relative;
   z-index: 2;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  padding-top: 30px; }
 
 .header-menu_pages > div > a {
   margin: 0 25px;
-  padding: 15px;
+  padding: 6px 15px;
   font-size: 14px;
   display: block;
   position: relative;
@@ -373,10 +375,12 @@ template {
     width: 0;
     background-color: #ffffff;
     bottom: 0;
-    left: 0; }
-  .header-menu_pages > div > a:hover::after {
-    width: 100%;
+    left: 0;
     transition: 0.3s; }
+  .header-menu_pages > div > a:hover::after {
+    width: 100%; }
+.header-menu_pages [page='active']::after {
+  width: 100%; }
 .header-menu_discord--link {
   margin: 0 0 0 25px;
   white-space: nowrap;
@@ -384,7 +388,7 @@ template {
   .header-menu_discord--link > a {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 6px 15px;
     font-family: "Oswald", sans-serif;
     font-size: 16px;
     background: rgba(255, 255, 255, 0.1);
@@ -404,31 +408,181 @@ template {
       top: 0;
       left: 0;
       background: #5662F6;
-      z-index: 0; }
-    .header-menu_discord--link > a:hover::after {
-      width: 100%;
+      z-index: 0;
       transition: 0.3s; }
+    .header-menu_discord--link > a:hover::after {
+      width: 100%; }
+
+#footer {
+  background-color: #171717;
+  padding: 26px 0; }
+
+.footer-description {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .footer-description > p {
+    font-size: 16px; }
+
+.footer-link {
+  color: #EBD593;
+  text-decoration: underline; }
+
+#welcome {
+  height: 780px;
+  background-image: url("../resources/img/claymore.png");
+  background-size: auto;
+  position: relative; }
+  #welcome::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0.9) 100%);
+    top: 0;
+    left: 0;
+    z-index: 1; }
+
+.join-to-discord {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: fit-content;
+  padding: 10px 25px 10px 20px;
+  position: relative; }
+  .join-to-discord > span {
+    margin-left: 10px;
+    z-index: 2; }
+  .join-to-discord > svg {
+    z-index: 2; }
+  .join-to-discord::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #5662F6;
+    z-index: 0;
+    transition: 0.3s; }
+  .join-to-discord:hover::after {
+    width: 0; }
+
+.box--social_links a {
+  margin-right: 5px; }
+  .box--social_links a > svg {
+    transition: 0.3s; }
+  .box--social_links a:hover > svg {
+    background-color: rgba(0, 0, 0, 0.2); }
 
 .welcome-description {
   position: relative;
   z-index: 2; }
   .welcome-description h1 {
-    font-family: "Oswald", sans-serif;
-    font-size: 48px; }
+    font-family: "Oswald", sans-serif; }
   .welcome-description--text p {
     font-family: "Verdana", sans-serif;
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 30px; }
-  .welcome-description--discord a {
-    font-family: "Oswald", sans-serif;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    background-color: #5662F6;
-    width: fit-content;
-    padding: 10px 25px 10px 20px; }
-    .welcome-description--discord a > span {
+  .welcome-description--discord {
+    margin-bottom: 40px; }
+    .welcome-description--discord .join-to-discord {
+      background-color: #171717; }
+  .welcome-description--social h5 {
+    font-family: "Verdana", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; }
+
+#demo-description {
+  padding: 80px 0; }
+  #demo-description h2 {
+    color: #EBD593; }
+
+.demo-description--box p {
+  position: relative;
+  padding: 10px 0 10px 40px; }
+  .demo-description--box p::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background-color: #EBD593;
+    left: 0px;
+    top: 21px; }
+
+#home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; }
+
+.contact-us {
+  padding: 20px 65px 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .contact-us h1 {
+    margin: 0 0 30px 0; }
+  .contact-us--email {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: "Verdana", sans-serif;
+    margin-bottom: 20px;
+    display: flex; }
+    .contact-us--email a {
       margin-left: 10px; }
+  .contact-us .join-to-discord {
+    margin: 40px 0; }
+  .contact-us .box--social_links {
+    margin-top: 40px; }
+
+#changelog {
+  background-image: url("../resources/img/claymore.png");
+  background-size: auto;
+  position: relative; }
+  #changelog::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0.9) 100%);
+    top: 0;
+    left: 0;
+    z-index: 1; }
+
+.changelog--title {
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 2; }
+.changelog-box {
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 80px; }
+.changelog-description {
+  background-color: #171717;
+  border: 1px solid #3A3A3A;
+  padding: 40px;
+  margin-bottom: 20px; }
+  .changelog-description h2 {
+    font-size: 40px;
+    margin-bottom: 20px; }
+  .changelog-description--version {
+    font-weight: bold; }
+  .changelog-description--date {
+    font-style: italic;
+    margin: 15px 0; }
+  .changelog-description--more {
+    border-top: 1px solid #3A3A3A;
+    padding: 15px 0; }
+  .changelog-description--post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 /*# sourceMappingURL=main.css.map */

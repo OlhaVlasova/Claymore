@@ -1,5 +1,29 @@
 @import "reset";
 @import "vars";
+
+
+body {
+    background-color: $bodyDarkTheme;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $titleFontFamily;
+    color: $whiteColor;
+} 
+h1 {
+    font-size: $titleFontSizeH1;
+}
+h2 {
+    font-size: $titleFontSizeH2;
+}
+p {
+    font-family: $mainFontFamily;
+    font-size: $mainFontSize;
+}
+
+@import "header";
+@import "footer";
 @import "welcome";
+@import "contact";
+@import "changelog";
 
 

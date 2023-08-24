@@ -2,92 +2,64 @@
     height: 780px;
     background-image: url('../resources/img/claymore.png');
     background-size: auto;
-    padding-top: 30px;
     position: relative;
     &::after {
         content: '';
         position: absolute;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0.9) 100%);
         top: 0;
         left: 0;
         z-index: 1;
     }
 
 }
-#header {
+.join-to-discord {
+    font-family: $titleFontFamily;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    background-color: rgba($color: $whiteColor, $alpha: 0.1);
+    width: fit-content;
+    padding: 10px 25px 10px 20px;
     position: relative;
-    z-index: 2;
-    margin-bottom: 60px;
-}
-.header-menu {
-    &_pages {
-        &>div>a {
-            margin: 0 25px;
-            padding: 15px;
-            font-size: 14px;
-            display: block;
-            position: relative;
-            text-transform: uppercase;
-            font-family: $mainFontFamily;
-            font-size: $menuHeaderFontSize;
-            &::after {
-                content: '';
-                position: absolute;
-                height: 2px;
-                width: 0;
-                background-color: #ffffff;
-                bottom: 0;
-                left: 0;
-                
-            }
-            &:hover {
-                &::after {
-                    width: 100%;
-                    transition: 0.3s;
-                }
-            }
+    &>span {
+        margin-left: 10px;
+        z-index: 2;
+    }
+    &>svg {
+        z-index: 2;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background: $discordColor;
+        z-index: 0;
+        transition: 0.3s;
+    }
+    &:hover {
+        &::after {
+            width: 0;
+            
         }
     }
-    &_discord--link {
-        margin: 0 0 0 25px;
-        white-space: nowrap;
-        color: #ffffff;
-        &>a {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            font-family: $titleFontFamily;
-            font-size: 16px;
-            background: rgba($color: $whiteColor, $alpha: 0.1);
-            cursor: pointer;
-            position: relative;
-            z-index: 10;
-            &>span {
-                margin-left: 10px;
-                z-index: 1;
-            }
+}
+
+.box--social_links {
+    a {
+        margin-right: 5px;
+        &>svg {
+            transition: 0.3s;
+        }
+        &:hover {
             &>svg {
-                z-index: 1;
+                background-color: rgba($color: #000, $alpha: 0.2);
             }
-            &::after {
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 100%;
-                top: 0;
-                left: 0;
-                background: $discordColor;
-                z-index: 0;
-            }
-            &:hover {
-                &::after {
-                    width: 100%;
-                    transition: 0.3s;
-                }
-            }
-            
         }
     }
 }
@@ -96,7 +68,6 @@
     z-index: 2;
     h1 {
         font-family: $titleFontFamily;
-        font-size: $titleFontSize;
     }
     &--text {
         p {
@@ -107,19 +78,44 @@
         }
     }
     &--discord {
-        a {
-            font-family: $titleFontFamily;
-            font-size: 24px;
-            display: flex;
-            align-items: center;
-            background-color: $discordColor;
-            width: fit-content;
-            padding: 10px 25px 10px 20px;
-            &>span {
-                margin-left: 10px;
-            }
+        margin-bottom: 40px;
+        .join-to-discord {
+            background-color: $footerBg;
         }
         
     }
+    &--social {
+        h5 {
+            font-family: $mainFontFamily;
+            font-size: $mainFontSize;
+            font-weight: bold;
+            color: $whiteColor;
+        }
+    }
     
+}
+
+
+
+#demo-description {
+    padding: 80px 0;
+    h2 {
+        color: $secondaryColor;
+    }
+}
+
+.demo-description--box {
+    p {
+        position: relative;
+        padding: 10px 0 10px 40px;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 4px;
+            background-color: $secondaryColor;
+            left: 0px;
+            top: 21px;
+        }
+    }
 }
