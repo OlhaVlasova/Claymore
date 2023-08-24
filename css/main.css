@@ -10,7 +10,11 @@
 
 a {
   outline: none;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #ffffff; }
+
+a:hover {
+  color: #ffffff; }
 
 ul, ol, li {
   list-style: none;
@@ -35,7 +39,8 @@ html {
 
 p {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: #ffffff; }
 
 /* Sections
    ========================================================================== */
@@ -57,7 +62,8 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+  color: #ffffff; }
 
 /* Grouping content
    ========================================================================== */
@@ -329,5 +335,100 @@ template {
  */
 [hidden] {
   display: none; }
+
+#welcome {
+  height: 780px;
+  background-image: url("../resources/img/claymore.png");
+  background-size: auto;
+  padding-top: 30px;
+  position: relative; }
+  #welcome::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+    top: 0;
+    left: 0;
+    z-index: 1; }
+
+#header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 60px; }
+
+.header-menu_pages > div > a {
+  margin: 0 25px;
+  padding: 15px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Verdana", sans-serif;
+  font-size: 14px; }
+  .header-menu_pages > div > a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0; }
+  .header-menu_pages > div > a:hover::after {
+    width: 100%;
+    transition: 0.3s; }
+.header-menu_discord--link {
+  margin: 0 0 0 25px;
+  white-space: nowrap;
+  color: #ffffff; }
+  .header-menu_discord--link > a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    position: relative;
+    z-index: 10; }
+    .header-menu_discord--link > a > span {
+      margin-left: 10px;
+      z-index: 1; }
+    .header-menu_discord--link > a > svg {
+      z-index: 1; }
+    .header-menu_discord--link > a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #5662F6;
+      z-index: 0; }
+    .header-menu_discord--link > a:hover::after {
+      width: 100%;
+      transition: 0.3s; }
+
+.welcome-description {
+  position: relative;
+  z-index: 2; }
+  .welcome-description h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 48px; }
+  .welcome-description--text p {
+    font-family: "Verdana", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px; }
+  .welcome-description--discord a {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    background-color: #5662F6;
+    width: fit-content;
+    padding: 10px 25px 10px 20px; }
+    .welcome-description--discord a > span {
+      margin-left: 10px; }
 
 /*# sourceMappingURL=main.css.map */
