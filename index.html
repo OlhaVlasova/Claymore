@@ -13,12 +13,22 @@
 </head>
 <body>
     <section id="welcome" class="container-fluid">
-        <header id="header" class="container">
+        <div class="welcome--shadow"></div>
+        <header id="header" class="container-md">
             <div class="row align-items-center">
+
+                <div class="burger-icon" id="burger">
+                    <span class="burger-icon--line"></span>
+                    <span class="burger-icon--line"></span>
+                    <span class="burger-icon--line"></span>
+                </div>
+
                 <div id="logo" class="col-md-5">
                     <a href="#"><img src="resources/img/logo.png"></a>
                 </div>
-                <div id="menu" class="col-md-7 header-menu d-flex justify-content-end">
+                
+                
+                <nav id="menu" class="col-md-7 header-menu">
                     <div class="header-menu_pages d-flex">
                         <div class="header-menu_pages--home"><a href="#" page='active'>Home</a></div>
                         <div class="header-menu_pages--changelog"><a href="pages/changelog.html">Changelog</a></div>
@@ -30,15 +40,13 @@
                             <span>Join to Discord</span></a>
                         </div>
                     </div>
-
-                </div>
+                </nav>
             </div>
-
         </header>
 
         <div class="container">
             <div class="row">
-                <div class="col-md-7 offset-md-5 welcome-description">
+                <div class="col-lg-7 offset-lg-5 welcome-description">
                     <h1>What is Claymore about?</h1>
                     <div class="welcome-description--text">
                         <p>Claymore is a multiplayer melee slasher game set in the medieval time period between the 
@@ -111,7 +119,7 @@
 
     <section id="demo-description" class="container">
         <div class="row">
-            <div class="col-md-8 demo-description--box">
+            <div class="col-lg-8 col-md-11 demo-description--box">
                 <h2>The first crowdfund demo version will consist of at least:</h2>
                 <div>
                     <p>Full combat experience that incl. Footman, lancing and archery</p>

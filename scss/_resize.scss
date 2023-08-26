@@ -1,0 +1,59 @@
+@media screen and (max-width: 992px) {
+    #logo {
+        img {
+            max-width: 150px;
+        }
+    }
+    .header-menu {
+        &_pages>div>a {
+            margin: 0 5px 0 5px;
+            padding: 6px 10px;
+        }
+        &_discord--link {
+            margin: 0 0 0 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        padding-top: 20px;
+    }
+    #logo {
+        text-align: center;
+    }
+    .header-menu {
+        position: absolute;
+        background-color: $mobileMenuBg;
+        width: 80%;
+        height: 100vh;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: -80%;
+        transition: transform 0.5s;
+        .header-menu_pages {
+            flex-direction: column;
+
+        }
+    }
+    .burger-icon {
+        display: block;
+    }
+    .welcome-description {
+        &--discord {
+            .join-to-discord {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+    #header.open {
+        .header-menu {
+            transform: translateX(100%);
+        }
+    }
+
+}
