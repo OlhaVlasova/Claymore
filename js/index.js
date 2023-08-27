@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
      
     function handleTouchMove(evt) {
-        // if(!document.getElementById("header").classList.contains("open")) return;
+        if(!document.getElementById("header").classList.contains("open")) return;
         if ( ! xDown || ! yDown ) {
             return;
         }
@@ -38,10 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if ( xDiff > 0 ) {
                 document.getElementById("header").classList.remove("open");
                 document.querySelector("body").classList.remove("noScroll");
-            }  else {
-                document.getElementById("header").classList.add("open");
-                document.querySelector("body").classList.add("noScroll");
-            }         
+            }        
         }
         xDown = null;
         yDown = null;
