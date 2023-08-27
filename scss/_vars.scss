@@ -1,10 +1,6 @@
 $mainFontFamily: 'Verdana', sans-serif !default;
-$mainFontSize: 18px !default;
 
 $titleFontFamily: 'Oswald', sans-serif;
-$titleFontSizeH1: 48px !default;
-$titleFontSizeH2: 36px !default;
-
 
 $menuHeaderFontSize: 14px;
 
@@ -15,4 +11,15 @@ $bodyDarkTheme: #313131;
 $secondaryColor: #EBD593;
 $footerBg: #171717;
 $mobileMenuBg: #202020;
+
+// menu
+$mobileMenuSizeMD: 85% !default;
+
+:root {
+    --main-font-size: 18px;
+    --title-font-size-h1: 48px;
+    --title-font-size-h2: 36px;
+    --mobile-menu-size: 85vw;
+    --mobile-margin-size: -85vw;
+}
 

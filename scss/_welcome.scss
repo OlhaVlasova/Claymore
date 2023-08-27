@@ -19,7 +19,6 @@
     font-size: 24px;
     display: flex;
     align-items: center;
-    // background-color: rgba($color: $whiteColor, $alpha: 0.1);
     background-color: $discordColor;
     width: fit-content;
     padding: 10px 25px 10px 20px;
@@ -27,28 +26,9 @@
     transition: all .5s;
     &>span {
         margin-left: 10px;
-        // z-index: 2;
     }
-    // &>svg {
-    //     z-index: 2;
-    // }
-    // &::after {
-    //     content: '';
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     top: 0;
-    //     right: 0;
-    //     background: $discordColor;
-    //     z-index: -1;
-    //     transition: 0.3s;
-    // }
     &:hover {
         background-color: rgba($color: $whiteColor, $alpha: 0.1);
-        // &::after {
-        //     width: 0;
-            
-        // }
     }
 }
 
@@ -67,45 +47,35 @@
 }
 .welcome-description {
     position: relative;
-    // z-index: 2;
     h1 {
         font-family: $titleFontFamily;
     }
     &--text {
         p {
             font-family: $mainFontFamily;
-            font-size: $mainFontSize;
+            font-size: var(--main-font-size);
             line-height: 1.5;
             margin-bottom: 30px;
         }
     }
     &--discord {
-        margin-bottom: 40px;
-        .join-to-discord {
-            // background-color: $footerBg;
-        }
-        
+        margin-bottom: 40px;        
     }
     &--social {
         h5 {
             font-family: $mainFontFamily;
-            font-size: $mainFontSize;
+            font-size: var(--main-font-size);
             font-weight: bold;
             color: $whiteColor;
         }
     }
-    
 }
-
-
-
 #demo-description {
     padding: 80px 0;
     h2 {
         color: $secondaryColor;
     }
 }
-
 .demo-description--box {
     p {
         position: relative;

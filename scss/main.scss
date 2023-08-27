@@ -10,14 +10,24 @@ h1, h2, h3, h4, h5, h6 {
     color: $whiteColor;
 } 
 h1 {
-    font-size: $titleFontSizeH1;
+    font-size: var(--title-font-size-h1);
 }
 h2 {
-    font-size: $titleFontSizeH2;
+    font-size: var(--title-font-size-h2);
 }
 p {
     font-family: $mainFontFamily;
-    font-size: $mainFontSize;
+    font-size: var(--main-font-size);
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, rgba($color: #fff, $alpha: 0.1));
+    border-radius: 6px;
+    &:hover{
+        background: linear-gradient(transparent, rgba($color: #fff, $alpha: 0.7));
+    }
 }
 
 @import "header";
